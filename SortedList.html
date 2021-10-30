@@ -74,36 +74,14 @@ hendleTask()
  const selectElement = document.getElementById('users-select')
  selectElement.addEventListener('change', (event) => {
      const final = document.getElementById('res');
-  let iterable_20 = [];
- for (let user of users){
-    if (user.age === '20'){
-     iterable_20.push(user.name)
+  let iterable = [];
+  for (let user of users){
+    if (user.age === selectElement.value){
+     iterable.push(user.name)
     }
-}
-let iterable_30 = [];
-for(let user of users){
-    if (user.age === '30'){
-     iterable_30.push(user.name)
-    }
-}
-let iterable_40 = [];
-for(let user of users){
-    if (user.age === '40'){
-     iterable_40.push(user.name)
-    }
-}
-     for (let key in users) {
-         if(selectElement.value === '20'){
-           return final.textContent = `${iterable_20}`
-         }
-         if(selectElement.value === '30' ){
-            return final.textContent = `${iterable_30}` 
-         }
-         if(selectElement.value === '40' ){
-            return final.textContent = `${iterable_40}` 
-         }
-         
-     }     
+}        
+            return final.textContent = `${iterable}`
+
     
  })
 
